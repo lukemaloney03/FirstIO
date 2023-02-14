@@ -5,19 +5,12 @@ on:
     branches: main
 
 jobs:
-  lint_setup:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Install Dependencies
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y -f cppcheck python3 cmake g++
-        
-  linting:
-    needs: lint_setup
+  lint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Build project
+      - name: Run linters
         run: |
+          sudo apt-get update
+          sudo apt-get install -y -f cppcheck python3 cmake g++
           cppcheck .
