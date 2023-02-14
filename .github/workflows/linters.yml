@@ -11,7 +11,7 @@ jobs:
       - name: Install Dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y -f cppcheck python3 cmake g++ git-all
+          sudo apt-get install -y -f cppcheck python3 cmake g++ git
       - name: Build Clang
         run: |
           git clone --depth=1 https://github.com/llvm/llvm-project.git
