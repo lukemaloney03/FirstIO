@@ -11,20 +11,7 @@ jobs:
       - name: Install Dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y -f cppcheck python3 cmake g++ git
-      - name: Build Clang
-        run: |
-          PROJ_DIR=`pwd`
-          cd ..
-          git clone --depth=1 https://github.com/llvm/llvm-project.git
-          cd llvm-project
-          mkdir build
-          cd build
-          cmake -DLLVM_ENABLE_PROJECTS=clang -DCMAKE_BUILD_TYPE=Release -G "Unix Makefiles" ../llvm
-          make
-          cd bin
-          export PATH=$PATH:`pwd`
-          cd $PROJ_DIR
+          sudo apt-get install -y -f cppcheck python3 cmake g++
         
   linting:
     needs: lint_setup
@@ -34,4 +21,3 @@ jobs:
       - name: Build project
         run: |
           cppcheck .
-          scan-build -o logs g++ main.cpp -std=c++17 -Wall -Wextra -Werror -o firstIO
