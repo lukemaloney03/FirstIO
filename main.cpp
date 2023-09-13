@@ -9,9 +9,10 @@ int main(){
   cout << "? ";
   cin >> input;
 
-  if( input == "help" )
+  if( input == "help" ){
     cout << "Hi!\n";
     cout << "Options:\nadd\nsubtract\nmultiply\ndivide\nhelp\nquit\n";
+  }
   else if( input == "add" || "subtract" || "multiply" || "divide"){
     cout << "First number: ";
     cin >> num1;
