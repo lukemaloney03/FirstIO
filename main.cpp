@@ -13,7 +13,7 @@ int main(){
     cout << "Hi!\n";
     cout << "Options:\nadd\nsubtract\nmultiply\ndivide\nhelp\nquit\n";
   }
-  else if( input == "add" || "subtract" || "multiply" || "divide"){
+  else if( input == "add" || input == "subtract" || input == "multiply" || input == "divide"){
     cout << "First number: ";
     cin >> num1;
     cin >> num2;
