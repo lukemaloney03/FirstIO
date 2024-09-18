@@ -2,7 +2,7 @@
 using namespace std;
 
 int main(){
-  string input = "";
+  string input = ""
   int num1 = 0;
   int num2 = 0;
 
