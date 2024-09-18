@@ -29,7 +29,7 @@ int main(){
     }
     else if( input == "divide" ){
       if( num2 == 0 ){
-        cout << "Error: Cannot Divide by zero!\n"
+        cout << "Error: Cannot Divide by zero!\n";
       }
       else{
         cout << "=" << num1/num2 << endl;
