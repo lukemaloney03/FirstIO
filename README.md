@@ -1,0 +1,1 @@
+[![Build C++](https://github.com/lukemaloney03/FirstIO/actions/workflows/actions.yml/badge.svg)](https://github.com/lukemaloney03/FirstIO/actions/workflows/actions.yml)
